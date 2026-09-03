@@ -3,14 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HTML Attributes Assignment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        /* Class styling for multiple elements */
+        .highlight {
+            background-color: #f0f8ff;
+            padding: 10px;
+            border-left: 4px solid #007bff;
+            margin-bottom: 10px;
+        }
+        .styled-text {
+            color: #2c3e50;
+            font-weight: bold;
+        }
+        /* Styling using unique IDs */
+        #main-header {
+            text-align: center;
+            color: #333;
+        }
+        #navigation {
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        #navigation a {
+            color: white;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+        /* Responsive Image Styling */
+        .responsive-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+    </style>
 </head>
 <body>
-    <p>
-        <a> cuntact us</a>
-    </p>
 
-    <p> lorem100</p>
-    
+    <!-- Header Section with unique ID -->
+    <h1 id="main-header" title="Main Header Tooltip">HTML Attributes Practice Page</h1>
+
+    <!-- Navigation Bar using IDs for page sections -->
+    <nav id="navigation">
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#links">Links & Contact</a>
+    </nav>
+
+    <hr>
+
+    <!-- Section 1: Class and ID usage -->
+    <section id="about">
+        <h2>About Section</h2>
+        <p class="highlight styled-text">
+            This paragraph uses CSS classes (.highlight and .styled-text) for styling multiple elements.
+        </p>
+        <p class="highlight" title="Hover Tooltip Example">
+            Hover over this text to see the title attribute in action!
+        </p>
+        <!-- Hidden attribute example -->
+        <p hidden>This text is hidden using the hidden attribute.</p>
+    </section>
+
+    <hr>
+
+    <!-- Section 2: Images (Dimensions, Responsive, Clickable) -->
+    <section id="gallery">
+        <h2>Image Gallery</h2>
+        
+        <h3>1. Standard Image with Dimensions</h3>
+        <img src="https://via.placeholder.com/300x150" alt="Placeholder sample image" width="300" height="150" title="Fixed Size Image">
+
+        <h3>2. Responsive Image</h3>
+        <img src="https://via.placeholder.com/600x200" alt="Responsive landscape view" class="responsive-img" title="Responsive Image">
+
+        <h3>3. Clickable Image (Image inside &lt;a&gt;)</h3>
+        <a href="https://www.google.com" target="_blank" title="Click image to open Google">
+            <img src="https://via.placeholder.com/150" alt="Clickable logo image" width="150" height="150">
+        </a>
+    </section>
+
+    <hr>
+
+    <!-- Section 3: Hyperlinks & Attributes -->
+    <section id="links">
+        <h2>Links & Resources</h2>
+        <ul>
+            <!-- Absolute Link -->
+            <li>
+                <a href="https://developer.mozilla.org" target="_blank" title="Opens MDN in a new tab">
+                    External Website (Absolute Link)
+                </a>
+            </li>
+            
+            <!-- Relative Link (Local File) -->
+            <li>
+                <a href="about.html" title="Goes to local about page">
+                    Local File (Relative Link)
+                </a>
+            </li>
+
+            <!-- Mailto Link -->
+            <li>
+                <a href="mailto:example@student.com" title="Send an email">
+                    Send Email (mailto:)
+                </a>
+            </li>
+
+            <!-- Download Link -->
+            <li>
+                <a href="sample.pdf" download title="Download file">
+                    Download PDF File
+                </a>
+            </li>
+        </ul>
+    </section>
+
 </body>
 </html>
