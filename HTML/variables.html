@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Variables and Scope</title>
+</head>
+<body>
+
+    <h1>JavaScript Variables and Scope</h1>
+
+    <script>
+
+        // ==============================
+        // 1. GLOBAL SCOPE
+        // ==============================
+
+        var globalVar = "Global Var";
+        let globalLet = "Global Let";
+        const globalConst = "Global Const";
+
+        console.log("GLOBAL SCOPE");
+        console.log(globalVar);
+        console.log(globalLet);
+        console.log(globalConst);
+
+
+        // ==============================
+        // 2. FUNCTION SCOPE
+        // ==============================
+
+        function testFunction() {
+
+            var functionVar = "Function Var";
+            let functionLet = "Function Let";
+            const functionConst = "Function Const";
+
+            console.log("FUNCTION SCOPE");
+            console.log(functionVar);
+            console.log(functionLet);
+            console.log(functionConst);
+        }
+
+        testFunction();
+
+
+        // ==============================
+        // 3. BLOCK SCOPE
+        // ==============================
+
+        {
+            var blockVar = "Block Var";
+            let blockLet = "Block Let";
+            const blockConst = "Block Const";
+
+            console.log("BLOCK SCOPE");
+            console.log(blockVar);
+            console.log(blockLet);
+            console.log(blockConst);
+        }
+
+
+        // ==============================
+        // OUT OF SCOPE
+        // ==============================
+
+        console.log("OUT OF SCOPE");
+
+        console.log("blockVar:", blockVar);
+
+        try {
+            console.log(functionLet);
+        } catch (error) {
+            console.log("Error: functionLet is not defined outside the function.");
+        }
+
+        try {
+            console.log(blockLet);
+        } catch (error) {
+            console.log("Error: blockLet is not defined outside the block.");
+        }
+
+        try {
+            console.log(blockConst);
+        } catch (error) {
+            console.log("Error: blockConst is not defined outside the block.");
+        }
+
+
+        // ==============================
+        // ERROR EXPLANATION
+        // ==============================
+
+        console.log("ERROR EXPLANATION:");
+        console.log(
+            "let and const are block scoped. " +
+            "They cannot be accessed outside their block or function."
+        );
+
+        console.log(
+            "var is function scoped and can be accessed outside a block."
+        );
+
+    </script>
+
+</body>
+</html>
