@@ -1,0 +1,19 @@
+/* Q1 */
+div p {
+    color: red;
+}
+
+/* Q2 */
+div > p {
+    color: blue;
+}
+
+/* Q3 */
+h2 + p {
+    color: green;
+}
+
+/* Q4 */
+h2 ~ p {
+    color: orange;
+}
