@@ -1,0 +1,36 @@
+Arrays and Looping Task Solutions (JavaScript)
+1. Use push, pop, shift, unshift on an array.
+let fruits = ["Apple", "Banana"];
+
+// 1. push() - Adds element to the END
+fruits.push("Mango");
+console.log(fruits); // Output: ["Apple", "Banana", "Mango"]
+
+// 2. pop() - Removes element from the END
+fruits.pop();
+console.log(fruits); // Output: ["Apple", "Banana"]
+
+// 3. unshift() - Adds element to the START
+fruits.unshift("Orange");
+console.log(fruits); // Output: ["Orange", "Apple", "Banana"]
+
+// 4. shift() - Removes element from the START
+fruits.shift();
+console.log(fruits); // Output: ["Apple", "Banana"]
+//
+
+2. Print all elements of an array using for loop.
+let numbers = [10, 20, 30, 40, 50];
+
+// Using a standard for loop
+for (let i = 0; i < numbers.length; i++) {
+  console.log(numbers[i]);
+}
+/* 
+Output:
+10
+20
+30
+40
+50
+*/
