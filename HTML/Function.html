@@ -1,0 +1,61 @@
+Functions Task Solutions (JavaScript)
+1. Write a function to add two numbers.
+function add(a, b) {
+  return a + b;
+}
+console.log(add(5, 3)); // Output: 8
+
+2. Write a function expression to multiply two numbers.
+const multiply = function(a, b) {
+  return a * b;
+};
+console.log(multiply(4, 2)); // Output: 8
+
+3. Write an arrow function to subtract two numbers.
+const subtract = (a, b) => a - b;
+
+console.log(subtract(10, 4)); // Output: 6
+
+4. Write a function with parameters and return a value.
+function greetUser(name) {
+  return "Hello, " + name + "!";
+}
+console.log(greetUser("Bro")); // Output: Hello, Bro!
+
+5. Demonstrate global vs local scope.
+let globalVar = "I am Global"; // Accessible everywhere
+
+function scopeDemo() {
+  let localVar = "I am Local"; // Accessible ONLY inside this function
+  console.log(globalVar); // Works
+  console.log(localVar);  // Works
+}
+
+scopeDemo();
+// console.log(localVar); // Error: localVar is not defined
+
+6. Give example for callback Function
+function processName(name, callback) {
+  console.log("Processing name: " + name);
+  callback(); // Calling the callback function
+}
+
+function showDone() {
+  console.log("Task Completed!");
+}
+
+processName("Alex", showDone);
+
+7. Give example for Function Closure
+function outerFunction() {
+  let count = 0; // Outer scope variable
+
+  return function innerFunction() {
+    count++; // Accesses outer variable even after outerFunction has executed
+    return count;
+  };
+}
+
+const counter = outerFunction();
+console.log(counter()); // Output: 1
+console.log(counter()); // Output: 2
