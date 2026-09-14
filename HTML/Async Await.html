@@ -1,0 +1,66 @@
+Async Task Solutions (JavaScript)
+1. Write a function that accepts a callback.
+function fetchData(callback) {
+  console.log("Fetching data...");
+  callback("Data received successfully!");
+}
+
+function processData(message) {
+  console.log(message);
+}
+
+fetchData(processData);
+
+2. Create a promise that resolves or rejects.
+const checkNumber = new Promise((resolve, reject) => {
+  let number = 10;
+
+  if (number > 5) {
+    resolve("Success: Number is greater than 5!");
+  } else {
+    reject("Error: Number is too small!");
+  }
+});
+
+3. Handle promise using then and catch.
+checkNumber
+  .then((result) => {
+    console.log(result); // Runs if resolved
+  })
+  .catch((error) => {
+    console.error(error); // Runs if rejected
+  });
+  
+  //
+
+  Async/Await Solution (JavaScript)
+1. Original Promise Code (.then / .catch)
+function fetchData() {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve("Data fetched successfully!"), 1000);
+  });
+}
+
+// Handling with .then()
+fetchData()
+  .then((data) => console.log(data))
+  .catch((error) => console.error(error));
+
+2. Rewritten Code using async/await
+function fetchData() {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve("Data fetched successfully!"), 1000);
+  });
+}
+
+// Rewritten with async/await and try...catch
+async function getData() {
+  try {
+    const result = await fetchData();
+    console.log(result);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+getData();
