@@ -1,0 +1,81 @@
+ES6 Features & Arrow Functions Task Solutions (JavaScript)
+ES6_1
+1. Rewrite code with let and const.
+// Old (ES5) using var
+var oldName = "John";
+oldName = "Alex"; // Reassignable
+
+// ES6 using let and const
+let name = "Alex"; // Use let for variables that change
+const PI = 3.14;   // Use const for variables that never change
+
+2. Use template literals with variables.
+const user = "Alex";
+const age = 22;
+
+// Template literal using backticks ``
+const greeting = `Hello, my name is ${user} and I am ${age} years old.`;
+console.log(greeting);
+
+3. Create a function with default parameter values.
+function greet(name = "Guest") {
+  return `Welcome, ${name}!`;
+}
+
+console.log(greet());        // Output: Welcome, Guest!
+console.log(greet("John"));  // Output: Welcome, John!
+
+ES6_2
+1. Extract values from an array/object using destructuring.
+// Array Destructuring
+const colors = ["Red", "Green", "Blue"];
+const [firstColor, secondColor] = colors;
+console.log(firstColor); // Output: Red
+
+// Object Destructuring
+const person = { username: "Alex", userAge: 22 };
+const { username, userAge } = person;
+console.log(username); // Output: Alex
+
+2. Copy an array using spread operator.
+const originalArray = [1, 2, 3];
+const copiedArray = [...originalArray];
+
+console.log(copiedArray); // Output: [1, 2, 3]
+
+3. Write a function using rest operator.
+function sum(...numbers) {
+  return numbers.reduce((total, num) => total + num, 0);
+}
+
+console.log(sum(1, 2, 3, 4)); // Output: 10
+
+ES6_3
+1. Write arrow functions.
+// Single parameter (implicit return)
+const double = x => x * 2;
+
+// Multiple parameters
+const add = (a, b) => a + b;
+
+console.log(double(5)); // Output: 10
+console.log(add(3, 4));   // Output: 7
+
+2. Create a simple class with constructor and method.
+class Car {
+  constructor(brand, model) {
+    this.brand = brand;
+    this.model = model;
+  }
+
+  getDetails() {
+    return `Car: ${this.brand} ${this.model}`;
+  }
+}
+
+const myCar = new Car("Toyota", "Corolla");
+console.log(myCar.getDetails()); // Output: Car: Toyota Corolla
+```<ElicitationsGroup message="Need help with any specific ES6 topic?">
+  <Elicitation label="Explain Array Destructuring vs Object Destructuring" query="Can you explain the detailed difference between Array and Object Destructuring in ES6?"/>
+  <Elicitation label="Explain ES6 Modules (import / export)" query="How do ES6 import and export modules work with code examples?"/>
+</ElicitationsGroup>
