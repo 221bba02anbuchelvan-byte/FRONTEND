@@ -1,0 +1,25 @@
+Object Properties and Methods Task Solutions (JavaScript)
+1. Create an object with name, age, and method sayHello().
+const person = {
+  name: "Alex",
+  age: 22,
+  sayHello: function() {
+    console.log("Hello, my name is " + this.name);
+  }
+};
+
+2. Access and modify object properties.
+// Accessing properties
+console.log(person.name); // Output: Alex
+console.log(person.age);  // Output: 22
+
+// Modifying properties
+person.name = "John";
+person.age = 25;
+
+console.log(person.name); // Output: John
+console.log(person.age);  // Output: 25
+
+3. Call an object method.
+// Calling the sayHello method
+person.sayHello(); // Output: Hello, my name is John
