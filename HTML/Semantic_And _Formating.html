@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My HTML Assignment</title>
+</head>
+<body>
+
+    <!-- 1. Header (Logo & Title) -->
+    <header id="top">
+        <h1>My Webpage Title</h1>
+        <p><b><i>Welcome to my HTML Page!</i></b></p>
+    </header>
+
+    <!-- 2. Navigation Bar (Internal & External Links) -->
+    <nav>
+        <a href="#about">About</a> | 
+        <a href="#feedback">Feedback Form</a> | 
+        <a href="https://www.google.com" target="_blank">Google (External Link)</a>
+    </nav>
+
+    <hr>
+
+    <!-- 3. Main Content Area -->
+    <main>
+        <!-- Sectioning Content -->
+        <section id="about">
+            <h2>About Section</h2>
+            <p>This is primary content inside <strong>&lt;main&gt;</strong> tag.</p>
+
+            <!-- Article Content -->
+            <article>
+                <h3>Formatting Tags Demo</h3>
+                <p><strong>Strong text (important)</strong> vs <b>Bold text (style only)</b></p>
+                <p><em>Emphasized text</em> vs <i>Italic text</i></p>
+                <p><u>Underlined text</u>, <mark>Highlighted text</mark>, and <small>Small side note text</small></p>
+            </article>
+        </section>
+
+        <!-- Aside (Sidebar Content) -->
+        <aside>
+            <h4>Sidebar Info</h4>
+            <p>This is secondary content inside <code>&lt;aside&gt;</code>.</p>
+        </aside>
+
+        <hr>
+
+        <!-- Interactive Form Section -->
+        <section id="feedback">
+            <h2>Feedback Form</h2>
+            <form action="#">
+                <p>
+                    <label><b>Name:</b></label><br>
+                    <input type="text" placeholder="Enter your name" required>
+                </p>
+
+                <p>
+                    <label><b>Email:</b></label><br>
+                    <input type="email" placeholder="Enter your email" required>
+                </p>
+
+                <p>
+                    <label><b>Password:</b></label><br>
+                    <input type="password" placeholder="Enter password">
+                </p>
+
+                <p>
+                    <label><b>Gender:</b></label><br>
+                    <input type="radio" name="gender" value="male"> Male
+                    <input type="radio" name="gender" value="female"> Female
+                </p>
+
+                <p>
+                    <label><b>Skills:</b></label><br>
+                    <input type="checkbox" value="html"> HTML
+                    <input type="checkbox" value="css"> CSS
+                </p>
+
+                <p>
+                    <label><b>Your Message / Feedback:</b></label><br>
+                    <textarea rows="4" cols="30" placeholder="Type your feedback here..."></textarea>
+                </p>
+
+                <p>
+                    <button type="submit">Submit Form</button>
+                    <button type="reset">Reset</button>
+                </p>
+            </form>
+        </section>
+
+        <p><a href="#top">Back to Top</a></p>
+    </main>
+
+    <!-- 4. Footer -->
+    <footer>
+        <hr>
+        <p><small>&copy; 2026 My Assignment. All Rights Reserved.</small></p>
+    </footer>
+
+</body>
+</html>
