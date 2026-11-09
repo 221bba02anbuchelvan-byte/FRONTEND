@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Assignment</title>
+
+    
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>JavaScript Assignment</h1>
+
+    <!-- 1. Reverse a String -->
+    <div class="box">
+        <h3>1. Reverse a String</h3>
+
+        <input type="text" id="str1"
+        placeholder="Enter a string">
+
+        <button onclick="reverseString()">
+            Reverse
+        </button>
+
+        <p id="result1"></p>
+    </div>
+
+
+    <!-- 2. Palindrome String -->
+    <div class="box">
+        <h3>2. Check Palindrome String</h3>
+
+        <input type="text" id="str2"
+        placeholder="Enter a string">
+
+        <button onclick="checkPalindrome()">
+            Check
+        </button>
+
+        <p id="result2"></p>
+    </div>
+
+
+    <!-- 3. Largest Number -->
+    <div class="box">
+        <h3>3. Find Largest Number in Array</h3>
+
+        <input type="text" id="arr1"
+        placeholder="Enter numbers: 10,20,30,40">
+
+        <button onclick="findLargest()">
+            Find Largest
+        </button>
+
+        <p id="result3"></p>
+    </div>
+
+
+    <!-- 4. Remove First Element -->
+    <div class="box">
+        <h3>4. Remove First Element from Array</h3>
+
+        <input type="text" id="arr2"
+        placeholder="Enter numbers: 10,20,30,40">
+
+        <button onclick="removeFirst()">
+            Remove First
+        </button>
+
+        <p id="result4"></p>
+    </div>
+
+</div>
+
+
+<script>
+
+// 1. Reverse a String
+
+function reverseString() {
+
+    let str = document.getElementById("str1").value;
+
+    let reversed = str.split("").reverse().join("");
+
+    document.getElementById("result1").innerHTML =
+    "Reversed String: " + reversed;
+}
+
+
+// 2. Check Palindrome String
+
+function checkPalindrome() {
+
+    let str = document.getElementById("str2").value;
+
+    let reversed = str.split("").reverse().join("");
+
+    if (str.toLowerCase() === reversed.toLowerCase()) {
+
+        document.getElementById("result2").innerHTML =
+        "It is a Palindrome String";
+
+    } else {
+
+        document.getElementById("result2").innerHTML =
+        "It is not a Palindrome String";
+    }
+}
+
+
+// 3. Find Largest Number in Array
+
+function findLargest() {
+
+    let arr = document.getElementById("arr1").value
+    .split(",").map(Number);
+
+    let largest = Math.max(...arr);
+
+    document.getElementById("result3").innerHTML =
+    "Largest Number: " + largest;
+}
+
+
+// 4. Remove First Element from Array
+
+function removeFirst() {
+
+    let arr = document.getElementById("arr2").value
+    .split(",").map(Number);
+
+    arr.shift();
+
+    document.getElementById("result4").innerHTML =
+    "Updated Array: " + arr.join(", ");
+}
+
+</script>
+
+</body>
+</html>
